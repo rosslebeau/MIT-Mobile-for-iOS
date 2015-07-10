@@ -1011,7 +1011,7 @@ CGFloat const refreshControlTextHeight = 19;
     [self.managedObjectContext performBlockAndWait:^{
         if ([story.type isEqualToString:MITNewsStoryExternalType]) {
             isExternalStory = YES;
-            externalURL = story.sourceURL;
+            externalURL = [NSURL URLWithString:story.sourceURL];
         }
     }];
     

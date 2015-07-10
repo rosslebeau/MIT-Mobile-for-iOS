@@ -268,7 +268,7 @@ static NSUInteger MITNewsViewControllerTableViewHeaderHeight = 8;
     
     if ([story.type isEqualToString:MITNewsStoryExternalType]) {
         isExternalStory = YES;
-        externalURL = story.sourceURL;
+        externalURL = [NSURL URLWithString:story.sourceURL];
     }
 
     return (!isExternalStory || [[UIApplication sharedApplication] canOpenURL:externalURL]);

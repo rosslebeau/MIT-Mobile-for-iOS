@@ -166,7 +166,7 @@
     if (self.story) {
         NSMutableArray *items = [NSMutableArray arrayWithObject:self];
         [self.managedObjectContext performBlockAndWait:^{
-            NSURL *sourceURL = self.story.sourceURL;
+            NSURL *sourceURL = [NSURL URLWithString:self.story.sourceURL];
             if (sourceURL) {
                 [items addObject:sourceURL];
             }
@@ -217,7 +217,7 @@
 
         [self.managedObjectContext performBlockAndWait:^{
             viewController.galleryImages = [self.story.galleryImages array];
-            viewController.storyLink = self.story.sourceURL;
+            viewController.storyLink = [NSURL URLWithString:self.story.sourceURL];
             viewController.storyTitle = self.story.title;
         }];
     }

@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString * identifier;
 @property (nonatomic, strong) NSDate * publishedAt;
 @property (nonatomic, strong) NSNumber * read;
-@property (nonatomic, strong) NSURL * sourceURL;
+@property (nonatomic, strong) NSString * sourceURL;
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSNumber * topStory;
 @property (nonatomic, copy) NSString * type;
